@@ -3,3 +3,4 @@ vendor
 
 # NPM library
 node_modules
+dist/

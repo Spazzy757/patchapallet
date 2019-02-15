@@ -1,9 +1,0 @@
-version: "3.3"
-services:
-  patchapallet:
-    build: .
-    command: sh /opt/code/build/build.sh
-    volumes:
-      - .:/opt/code/
-    ports:
-      - 8006:80
