@@ -21,12 +21,7 @@ var banner = ['/*!\n',
 gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy', 'index']);
 
 
-gulp.task('build', function (callback) {
-    runSequence('clean:dist',
-        ['less', 'minify-css', 'minify-js', 'copy'],
-        callback
-    )
-})
+gulp.task('build', ['less', 'minify-css', 'minify-js', 'copy', 'index']);
 
 // Less task to compile the less files and add the banner
 gulp.task('less', function() {
