@@ -18,10 +18,10 @@ var banner = ['/*!\n',
 ].join('');
 
 // Default task
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy', 'index']);
+gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
 
 
-gulp.task('build', ['less', 'minify-css', 'minify-js', 'copy', 'index']);
+gulp.task('build', ['less', 'minify-css', 'minify-js', 'copy']);
 
 // Less task to compile the less files and add the banner
 gulp.task('less', function() {
@@ -103,7 +103,7 @@ gulp.task('index', function() {
 })
 
 // Copy Font Awesome core files from node_modules to vendor directory
-gulp.task('index', function() {
+gulp.task('imgs', function() {
     return gulp.src([
             'app/img/**',
         ])
