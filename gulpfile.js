@@ -102,8 +102,16 @@ gulp.task('index', function() {
         .pipe(gulp.dest('dist/'))
 })
 
+// Copy Font Awesome core files from node_modules to vendor directory
+gulp.task('index', function() {
+    return gulp.src([
+            'app/img/**',
+        ])
+        .pipe(gulp.dest('dist/img/'))
+})
+
 // Copy all dependencies from node_modules
-gulp.task('copy', ['bootstrap', 'jquery', 'fontawesome', 'magnific-popup', 'scrollreveal']);
+gulp.task('copy', ['bootstrap', 'jquery', 'fontawesome', 'magnific-popup', 'scrollreveal', 'index', 'imgs']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
