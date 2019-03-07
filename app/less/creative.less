@@ -19,12 +19,15 @@ hr {
 }
 
 hr.light {
-    border-color: white;
+    border-color: black;
+}
+hr.dark {
+    border-color: black;
 }
 
 a {
     .transition-all;
-    color: @theme-primary;
+    color: @dark;
     &:hover,
     &:focus {
         color: darken(@theme-primary, 10%);
@@ -48,15 +51,20 @@ p {
 
 .bg-primary {
     background-color: @theme-primary;
+    color: #000;
 }
 
 .bg-dark {
     background-color: @gray-darker;
     color: white;
 }
+.bg-blue {
+    background-color: @blue;
+    color: white;
+}
 
 .text-faded {
-    color: fade(white, 70%);
+    color: @dark;
 }
 
 section {
@@ -260,13 +268,14 @@ header {
             transform: translateY(-50%);
             .project-category,
             .project-name {
+                color: @dark;
                 .sans-serif-font;
                 padding: 0 15px;
             }
             .project-category {
                 text-transform: uppercase;
                 font-weight: 600;
-                font-size: 14px;
+                font-size: 24px;
             }
             .project-name {
                 font-size: 18px;
@@ -285,7 +294,7 @@ header {
         .portfolio-box-caption {
             .portfolio-box-caption-content {
                 .project-category {
-                    font-size: 16px;
+                    font-size: 24px;
                 }
                 .project-name {
                     font-size: 22px;
@@ -306,11 +315,17 @@ header {
     color: @theme-primary;
 }
 
+.icon-color {
+    color: @yellow;
+}
+
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
 }
-
+ul {
+    list-style-type: none;
+}
 // Button Styles
 .btn-default {
     .button-variant(@gray-darker;white;white);
